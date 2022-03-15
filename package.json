@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "build": "NODE_ENV=production rm -rf node_modules/.cache && rm -rf .next/ && rm -rf out/ && next build && next export && touch out/.nojekyll",
+    "deploy": "./bin/gh-pages",
+    "dev": "next",
+    "lint": "next lint",
+    "prettier": "prettier --write 'src/**/*.{js,json,ts,tsx}' '*.{js,json,ts,tsx}'",
+    "start": "next start",
+    "tsc": "tsc --version && tsc"
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "eslint": "^8.11.0",
+    "eslint-config-next": "^12.1.0",
+    "next": "^12.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
